@@ -5,6 +5,7 @@ package com.example.demo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -14,17 +15,18 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "car")
 public class Car {
-	@Column(name = "carid", nullable = false)
+	@Id
+	@Column(name = "car_id", nullable = false)
 	private int id;
 	
-	@Column(name = "maker", nullable = false)
+	@Column(name = "marker", nullable = false)
 	private String maker;
 	
 	@Column(name = "model", nullable = false)
 	private String model;
 	
 	@Column(name = "year", nullable = false)
-	private int year;
+	private String year;
 	
 	@Column(name = "color", nullable = false)
 	private String color;
@@ -84,14 +86,14 @@ public class Car {
 	/**
 	 * @return the year
 	 */
-	public int getYear() {
+	public String getYear() {
 		return year;
 	}
 
 	/**
 	 * @param year the year to set
 	 */
-	public void setYear(int year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 
